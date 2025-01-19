@@ -1,0 +1,19 @@
+function checkAnswer(){
+    const checkAnswer = 4;
+
+    const userAnswer = document.querySelector('input[name="quiz"]:checked')?.value;
+
+    const feedbackElement = document.getElementById("feedback"); 
+    if(userAnswer == checkAnswer){
+        feedbackElement.textContent = "Correct! Well done."; 
+    } else {
+        feedbackElement.textContent = "That's incorrect. Try Again!"; 
+    }
+
+}
+
+document.getElementById("submit-answer").addEventListener("click", checkAnswer); 
+
+
+
+
